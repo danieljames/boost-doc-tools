@@ -1,0 +1,60 @@
+# #   Copyright (c) 2012 Daniel James
+#
+#   Distributed under the Boost Software License, Version 1.0. (See
+#   accompanying file LICENSE_1_0.txt or copy at
+#   http://www.boost.org/LICENSE_1_0.txt)
+#
+
+# Find Boost:
+
+import modules ;
+import path ;
+
+local boost-root = [ modules.peek : BOOST_ROOT ] ;
+
+if $(boost-root)
+{
+    path-constant BOOST_ROOT : $(boost-root) ;
+}
+else
+{
+    ECHO "Warning: Need BOOST_ROOT to copy image + css from main repo." ;
+
+    # Just fill in this path so the script won't grind to a halt.
+    # Could I do something better?
+    path-constant BOOST_ROOT : . ;
+}
+
+
+# Documentation build:
+
+using boostbook ;
+using quickbook ;
+
+boostbook doc-guide : doc-guide-xml :
+    <xsl:param>boost.root=http://www.boost.org ;
+explicit doc-guide ;
+
+xml doc-guide-xml : doc-guide.qbk ;
+explicit doc-guide-xml ;
+
+# HTML docs
+
+alias html-docs : doc-guide css images : <format>html ;
+
+install css : [ glob $(BOOST_ROOT)/doc/src/*.css ]
+    : <location>html ;
+
+install images : [ glob $(BOOST_ROOT)/doc/src/images/*.png ]
+    : <location>html/images ;
+
+explicit css ;
+explicit images ;
+
+# PDF docs
+
+install pdf-docs : doc-guide :
+        <location>. <format>pdf <name>doc-guide.pdf
+    ;
+
+explicit pdf-docs ;

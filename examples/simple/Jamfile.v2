@@ -1,0 +1,7 @@
+using boostbook ;
+using quickbook ;
+
+boostbook simple : simple.xml :
+    <xsl:param>html.stylesheet=../../../html/boostbook.css
+    <xsl:param>boost.graphics.root=../../../html/images/
+    ;
