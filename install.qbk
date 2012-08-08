@@ -140,7 +140,7 @@ for most people this will be [^ C:\\Documents and Settings\\['username]].
 
 [section:mac OS X]
 
-If you're using Snow Leopard or Lion, then you should already have the xml
+If you're using Snow Leopard (OS X 10.6) or later, then you should already have the xml
 tools installed, so you just need to install the docbook xml and xslt files.
 The easiest way to do that is probably to use macports, install them with:
 
