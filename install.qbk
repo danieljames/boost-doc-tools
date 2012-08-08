@@ -178,7 +178,8 @@ add to your `user-config.jam`:
 
 [section:quickbook Pre-build quickbook]
 
-Quickbook is built automatically during the build process, but as it
+Boost.Build automatically builds Quickbook when required to build the
+documentation, but as it
 takes a little while to build you might prefer to build it in advance.
 To do this, in the command line type (replacing [^$BOOST_ROOT] with the
 root directory of boost):
