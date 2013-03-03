@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Debian and Ubuntu</title>
+<link rel="stylesheet" href="../boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="../index.html" title="Boost Documentation Tools">
+<link rel="up" href="../install.html" title="Chapter&#160;1.&#160;Installing Boostbook and Quickbook">
+<link rel="prev" href="mac.html" title="OS X">
+<link rel="next" href="quickbook.html" title="Pre-build quickbook">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="spirit-nav">
+<a accesskey="p" href="mac.html"><img src="../images/prev.png" alt="Prev"></a><a accesskey="u" href="../install.html"><img src="../images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../images/home.png" alt="Home"></a><a accesskey="n" href="quickbook.html"><img src="../images/next.png" alt="Next"></a>
+</div>
+<div class="section install_debian">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="install.debian"></a><a class="link" href="debian.html" title="Debian and Ubuntu">Debian and Ubuntu</a>
+</h2></div></div></div>
+<p>
+        Installing on Debian and Ubuntu is pretty easy, just install the packages
+        using <code class="computeroutput">apt-get</code> (or an alternative, such as <code class="computeroutput">aptitude</code>):
+      </p>
+<pre class="programlisting">sudo apt-get install xsltproc docbook-xsl docbook-xml
+</pre>
+<p>
+        Boost.Build should be to find these packages without an explicit path, so
+        just add to your <code class="computeroutput">user-config.jam</code>:
+      </p>
+<pre class="programlisting">using boostbook ;
+using quickbook ;
+</pre>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer"></div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="mac.html"><img src="../images/prev.png" alt="Prev"></a><a accesskey="u" href="../install.html"><img src="../images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../images/home.png" alt="Home"></a><a accesskey="n" href="quickbook.html"><img src="../images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

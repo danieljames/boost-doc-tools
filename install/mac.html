@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>OS X</title>
+<link rel="stylesheet" href="../boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="../index.html" title="Boost Documentation Tools">
+<link rel="up" href="../install.html" title="Chapter&#160;1.&#160;Installing Boostbook and Quickbook">
+<link rel="prev" href="windows.html" title="Windows">
+<link rel="next" href="debian.html" title="Debian and Ubuntu">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="spirit-nav">
+<a accesskey="p" href="windows.html"><img src="../images/prev.png" alt="Prev"></a><a accesskey="u" href="../install.html"><img src="../images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../images/home.png" alt="Home"></a><a accesskey="n" href="debian.html"><img src="../images/next.png" alt="Next"></a>
+</div>
+<div class="section install_mac">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="install.mac"></a><a class="link" href="mac.html" title="OS X">OS X</a>
+</h2></div></div></div>
+<p>
+        If you're using Snow Leopard or Lion, then you should already have the xml
+        tools installed, so you just need to install the docbook xml and xslt files.
+        The easiest way to do that is probably to use macports, install them with:
+      </p>
+<pre class="programlisting">sudo port install docbook-xml-4.2 docbook-xsl
+</pre>
+<p>
+        For earlier versions of OS X, you'll also need to install <code class="computeroutput">libxslt</code>
+        to get an up to date version of <code class="computeroutput">xsltproc</code>:
+      </p>
+<pre class="programlisting">sudo port install libxslt docbook-xml-4.2 docbook-xsl
+</pre>
+<p>
+        Boost.Build knows the default install location for macports, so all you need
+        to add to your <code class="computeroutput">user-config.jam</code> is an instruction to use them:
+      </p>
+<pre class="programlisting">using boostbook ;
+using quickbook ;
+</pre>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer"></div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="windows.html"><img src="../images/prev.png" alt="Prev"></a><a accesskey="u" href="../install.html"><img src="../images/up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../images/home.png" alt="Home"></a><a accesskey="n" href="debian.html"><img src="../images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>
